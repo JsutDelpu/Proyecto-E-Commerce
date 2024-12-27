@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "name": "Par 2 Mancuernas Pvc Con Tope",
+        "precio": 8500,
+        "image": "img/products/n1.png"
+    },
+    {
+        "id": 2,
+        "name": "Par 2 Mancuernas Pvc Con Tope",
+        "precio": 8500,
+        "image": "img/products/n2.png"
+    },
+    {
+        "id": 3,
+        "name": "Par 2 Mancuernas Pvc Con Tope",
+        "precio": 8500,
+        "image": "img/products/n3.png"
+    },
+    {
+        "id": 4,
+        "name": "Par 2 Mancuernas Pvc Con Tope",
+        "precio": 8500,
+        "image": "img/products/n4.png"
+    },
+    {
+        "id": 5,
+        "name": "Par 2 Mancuernas Pvc Con Tope",
+        "precio": 8500,
+        "image": "img/products/n5.png"
+    },
+    {
+        "id": 6,
+        "name": "Par 2 Mancuernas Pvc Con Tope",
+        "precio": 8500,
+        "image": "img/products/n6.png"
+    },
+    {
+        "id": 7,
+        "name": "Par 2 Mancuernas Pvc Con Tope",
+        "precio": 8500,
+        "image": "img/products/n7.png"
+    },
+    {
+        "id": 8,
+        "name": "Par 2 Mancuernas Pvc Con Tope",
+        "precio": 8500,
+        "image": "img/products/n8.png"
+    },
+    {
+        "id": 9,
+        "name": "Par 2 Mancuernas Pvc Con Tope",
+        "precio": 8500,
+        "image": "img/products/n9.png"
+    }
+]

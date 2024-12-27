@@ -33,18 +33,18 @@ h1 {
 h2 {
     font-size: 46px;
     line-height: 54px;
-    font-weight: 300;
+    font-weight: 600;
     color: #222;
 }
 
 h4 {
     font-size: 20px;
     color: #222;
-    font-weight: 200;
+    font-weight: 400;
 }
 
 h6 {
-    font-weight: 500;
+    font-weight: 600;
     font-size:  16px;
 }
 
@@ -140,6 +140,23 @@ body {
     position: absolute;
     bottom: -4px;
     left: 20px;
+}
+
+#navbar li a .fa-shopping-cart{
+    position: relative;
+}
+#navbar li a span{
+    display: flex;
+    width: 23px;
+    height: 23px;
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+    color: #ffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
 }
 
 #mobile {
@@ -244,6 +261,131 @@ body {
     width: 100%;
     margin-bottom: 10px;
 }
+
+/* Productos */
+
+.listProduct .item img{
+    width: 90%;
+    filter: drop-shadow(0 5px 5px #0009);
+}
+
+.listProduct{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.listProduct .item{
+    background-color: #eeeee6;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.listProduct .item h4{
+    font-weight: 600;
+    font-size: large;
+}
+
+.listProduct .item .precio{
+    letter-spacing: 5px;
+    font-size: medium;
+}
+
+.listProduct .item button{
+    background-color: #353432;
+    color: #eee;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Carrito */
+.carrito h1{
+    color: #eee;
+    padding: 20px;
+    margin: 0;
+    font-weight: 300;
+    font-size: xx-large;
+}
+.carrito{
+    width: 400px;
+    background-color: #353432;
+    position: fixed;
+    top: 145px;
+    right: -400px;
+    bottom: 0;
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+    color: #eee;
+    transition: 0.5s;
+}
+body.showCart .carrito{
+    right: 0;
+}
+
+body.showCart .carrito{
+    transform: translateX(0px);
+}
+
+
+.carrito .btn{
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.carrito .btn button{
+    background-color: #E8BC0E;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.carrito .btn .close{
+    background-color: #eee;
+}
+
+.carrito .listCart .item img{
+    width: 100%;
+}
+
+.carrito .listCart .item{
+    display: grid;
+    grid-template-columns: 70px 150px 50px 1fr;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.listCart .quantity span{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: #eee;
+    color: #555;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.listCart .quantity span:nth-child(2){
+    background-color: transparent;
+    color: #eee;
+}
+
+.listCart .item:nth-child(even){
+    background-color: #eee1;
+}
+
+.listCart{
+    overflow: auto;
+}
+
+.listCart::-webkit-scrollbar{
+    width: 0;
+}
+
 
 #product1 {
     text-align: center;
@@ -690,6 +832,9 @@ footer .copyright{
 }
 
 /* Contact Page */
+/* #page-header.about-header {
+    background-image: url("img/banner/b14.png");
+} */
 
 #contact-details{
     display: flex;
@@ -921,6 +1066,42 @@ padding-right: 22px;
         padding: 40px 40px;
     }
 
+    #navbar li a .fa-shopping-cart{
+        position: relative;
+    }
+
+    /* #mobile a {
+        position: relative;
+    } */
+
+    #mobile a span{
+        display: flex;
+        width: 23px;
+        height: 23px;
+        background-color: red;
+        justify-content: center;
+        align-items: center;
+        color: #ffff;
+        border-radius: 50%;
+        /* position: relative; */
+        top: 50%;
+        left: 50%;
+    }
+    /* #navbar li a span{
+        display: flex;
+        width: 23px;
+        height: 23px;
+        background-color: red;
+        justify-content: center;
+        align-items: center;
+        color: #ffff;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    } */
+    
+
     #navbar {
         display: flex;
         flex-direction: column;
@@ -1020,6 +1201,13 @@ padding-right: 22px;
     #form-details form {
         width: 50%;
     }
+    .listProduct{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* #contact-details > div.map > iframe{
+        width: 40vh;
+    } */
 }
 
 @media (max-width: 477px) {
@@ -1156,5 +1344,14 @@ padding-right: 22px;
     #subtotal {
         width: 100%;
         padding: 20px;
+    }
+    .listProduct{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 380px){
+    .listProduct{
+        grid-template-columns: repeat(1, 1fr);
     }
 }
