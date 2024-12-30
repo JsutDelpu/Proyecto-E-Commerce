@@ -3,54 +3,176 @@
         "id": 1,
         "name": "Par 2 Mancuernas Pvc Con Tope",
         "precio": 8500,
-        "image": "img/products/n1.png"
+        "image": "img/products/n1.png",
+        "alt1": "img/products/n1a.png",
+        "alt2": "img/products/n1b.png",
+        "fullName": "Par 2 Mancuernas Pvc Con Tope A Rosca Gym Importadas Fitness Colir Gris Oscuro",
+        "rating": 4,
+        "brand": "DeporAr"
     },
     {
         "id": 2,
-        "name": "Par 2 Mancuernas Pvc Con Tope",
-        "precio": 8500,
-        "image": "img/products/n2.png"
+        "name": "Calleras Anti Desliz",
+        "precio": 38200,
+        "image": "img/products/n2.png",
+        "alt1": "img/products/n2a.png",
+        "alt2": "img/products/n2b.png",
+        "fullName": "Calleras Protectoras Anti Desliz Crossfit Funcional Gym",
+        "rating": 4,
+        "brand": "Tecnomoto"
     },
     {
         "id": 3,
-        "name": "Par 2 Mancuernas Pvc Con Tope",
-        "precio": 8500,
-        "image": "img/products/n3.png"
+        "name": "Kit Mancuernas",
+        "precio": 35900,
+        "image": "img/products/n3.png",
+        "alt1": "img/products/n3a.png",
+        "alt2": "img/products/n3b.png",
+        "fullName": "Kit Mancuernas Pesas X Par 1kg 2kg 3kg Premium Fitnesas gym",
+        "rating": 5,
+        "brand": "Fitnesas"
     },
     {
         "id": 4,
-        "name": "Par 2 Mancuernas Pvc Con Tope",
-        "precio": 8500,
-        "image": "img/products/n4.png"
+        "name": "Mancuernas + Discos 25KG",
+        "precio": 60150,
+        "image": "img/products/n4.png",
+        "alt1": "img/products/n4a.png",
+        "alt2": "img/products/n4b.png",
+        "fullName": "Mancuernas Con Topes Rosca + 25 Kg En Discos Gym Pesas Fit Color Negro y Gris",
+        "rating": 3.5,
+        "brand": "DeporAr"
     },
     {
         "id": 5,
-        "name": "Par 2 Mancuernas Pvc Con Tope",
-        "precio": 8500,
-        "image": "img/products/n5.png"
+        "name": "Mancuerna Ajustable 24KG",
+        "precio": 251990,
+        "image": "img/products/n5.png",
+        "alt1": "img/products/n5a.png",
+        "alt2": "img/products/n5b.png",
+        "fullName": "Pesa Mancuerna Ajustable 24 Kg Regulable Gym Base Automatica",
+        "rating": 5,
+        "brand": "Fibra Fitness"
     },
     {
         "id": 6,
-        "name": "Par 2 Mancuernas Pvc Con Tope",
-        "precio": 8500,
-        "image": "img/products/n6.png"
+        "name": "Roporte Para Banco Rack",
+        "precio": 284999,
+        "image": "img/products/n6.png",
+        "alt1": "img/products/n6a.png",
+        "alt2": "img/products/n6b.png",
+        "fullName": "Soporte Para Banco De Pecho Rack Gym Profesional Heavy Duty",
+        "rating": 5,
+        "brand": "Enetgy Git"
     },
     {
         "id": 7,
-        "name": "Par 2 Mancuernas Pvc Con Tope",
-        "precio": 8500,
-        "image": "img/products/n7.png"
+        "name": "Chaleco De Seguridad",
+        "precio": 438000,
+        "image": "img/products/n7.png",
+        "alt1": "img/products/n7a.png",
+        "alt2": "img/products/n7b.png",
+        "fullName": "Jacaranda Jinete Chaleco De Seguridad Para Equitacion",
+        "rating": 5,
+        "brand": "HKM Sport Equipment"
     },
     {
         "id": 8,
-        "name": "Par 2 Mancuernas Pvc Con Tope",
-        "precio": 8500,
-        "image": "img/products/n8.png"
+        "name": "Set Pesas Rusas",
+        "precio": 23500,
+        "image": "img/products/n8.png",
+        "alt1": "img/products/n8a.png",
+        "alt2": "img/products/n8b.png",
+        "fullName": "Set 3 Pesas Rusas Kettlebell 6kg-8kg-10kg Mr Gym",
+        "rating": 4.5,
+        "brand": "MrGym"
     },
     {
         "id": 9,
-        "name": "Par 2 Mancuernas Pvc Con Tope",
-        "precio": 8500,
-        "image": "img/products/n9.png"
+        "name": "Banco Multiangular",
+        "precio": 199000,
+        "image": "img/products/n9.png",
+        "alt1": "img/products/n9a.png",
+        "alt2": "img/products/n9b.png",
+        "fullName": "Banco Gym Multiangular Femorales Y Cuadriceps 4 Posiciones",
+        "rating": 4.5,
+        "brand": "Esh"
+    },
+    {
+        "id": 10,
+        "name": "Banda Resistencia Alta",
+        "precio": 32765,
+        "image": "img/products/n10.png",
+        "alt1": "img/products/n10a.png",
+        "alt2": "img/products/n10b.png",
+        "fullName": "Super Banda Crossfit Dominadas Calistenia Resistencia Alta",
+        "rating": 4.5,
+        "brand": "Hygge"
+    },
+    {
+        "id": 11,
+        "name": "Discos 1.25 Kg Fundicion",
+        "precio": 10989,
+        "image": "img/products/n11.png",
+        "alt1": "img/products/n11a.png",
+        "alt2": "img/products/n11b.png",
+        "fullName": "Par Discos 1.25 Kg Fundicion Pesa Mancuerna Gym - 2 Unidades Color Negro",
+        "rating": 5,
+        "brand": "Fundicion Disco Gym Pesas"
+    },
+    {
+        "id": 12,
+        "name": "Soga De Saltar",
+        "precio": 8509,
+        "image": "img/products/n12.png",
+        "alt1": "img/products/n12a.png",
+        "alt2": "img/products/n12b.png",
+        "fullName": "Soga De Saltar Speed Rope Cuerda De Pvc Acero Gym Boxeo Color Azul",
+        "rating": 4.5,
+        "brand": "Libercam"
+    },
+    {
+        "id": 13,
+        "name": "Palo de Hockey",
+        "precio": 32900,
+        "image": "img/products/n13.png",
+        "alt1": "img/products/n13a.png",
+        "alt2": "img/products/n13b.png",
+        "fullName": "Palo Hockey Equipment Fibra De Vidrio Iniciación",
+        "rating": 4.5,
+        "brand": "Hockey Equipment"
+    },
+    {
+        "id": 14,
+        "name": "Banco Plano",
+        "precio": 152990,
+        "image": "img/products/n14.png",
+        "alt1": "img/products/n14a.png",
+        "alt2": "img/products/n14b.png",
+        "fullName": "Banco Plano Gimnasio Ejercicios Pesas Press Pectorales Gym",
+        "rating": 5,
+        "brand": "Fibra Fitness"
+    },
+    {
+        "id": 15,
+        "name": "Multigimnasio",
+        "precio": 1499999,
+        "image": "img/products/n15.png",
+        "alt1": "img/products/n15a.png",
+        "alt2": "img/products/n15b.png",
+        "fullName": "Multigimnasio Multigym Body Sculpture Doble Estacion Homegym Negro Rojo",
+        "rating": 5,
+        "brand": "Body Sculpture"
+    },
+    {
+        "id": 16,
+        "name": "Mancuerna Recubierta 1KG",
+        "precio": 18500,
+        "image": "img/products/n16.png",
+        "alt1": "img/products/n16a.png",
+        "alt2": "img/products/n16b.png",
+        "fullName": "Mancuerna Recubierta En Goma 1kg Precio Por Par Gym Sport Pesas Fitness Gym Sport Color Rosa",
+        "rating": 4,
+        "brand": "BSFit"
     }
 ]

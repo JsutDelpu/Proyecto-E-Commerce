@@ -69,13 +69,18 @@
     </section>
 
     <section id="form-details">
-        <form action="">
+        <form action="https://formsubmit.co/delpuertolautaro07@gmail.com" method="post">
             <span>DEJA UN MENSAJE</span>
             <h2>Nos encantaria oirte</h2>
-            <input type="text" placeholder="Tu Nombre">
-            <input type="text" placeholder="Tu Correo">
-            <input type="text" placeholder="Asunto">
-            <textarea name="" id="" cols="30" rows="10" placeholder="Tu Mensaje"></textarea>
+            <input type="text" placeholder="Ingrese su Nombre" 
+            name="nombre" id="nombre" maxlength="100" required>
+            <input type="email" placeholder="Ingrese su Correo" 
+            name="mail" id="mail" maxlength="100" required>
+            <input type="text" placeholder="Asunto" 
+            name="asunto" id="asunto" maxlength="100" required>
+            <textarea name="mensaje" id="mensaje" 
+            cols="30" rows="10" placeholder="Su Mensaje..." required></textarea>
+            <!-- <input type="submit" value="Enviar" class="normal"> -->
             <button class="normal">Enviar</button>
         </form>
 
@@ -103,43 +108,22 @@
             <h4>Suscribite para enterate de todas las novedades</h4>
             <p>Recibi noticias y <span>ofertas especiales</span> a tu correo electronico</p>
         </div>
-        <div class="form">
-            <input type="text" placeholder="Tu correo electronico">
+        <form class="form" action="https://formsubmit.co/delpuertolautaro07@gmail.com" method="post">
+            <input type="email" placeholder="Su correo electronico" 
+            name="suscripcion" id="suscripcion" maxlength="100" required>
             <button class="normal">Registrarse</button>
-        </div>
+        </form>
     </section>
 
     
     <section id="product1" class="section-p1">
-        <div class="listProduct"><!-- 
-            <div class="item">
-                <img src="img/products/n1.png" alt="Imagen del Producto">
-                <h4>Nombre del Producto</h4>
-                <div class="precio">$$$</div>
-                <button class="addCart">Añadir al Carrito</button>
-            </div> -->
+        <div class="listProduct" id="hidden">
         </div>    
     </section>
 
     <div class="carrito">
         <h1>Carrito de Compras</h1>
         <div class="listCart">
-            <!-- <div class="item">
-                <div class="image">
-                    <img src="img/products/n1.png" alt="Producto">
-                </div>
-                <div class="name">
-                    NAME
-                </div>
-                <div class="totalPrice">
-                    $$$
-                </div>
-                <div class="quantity">
-                    <span class="minus"><</span>
-                    <span>1</span>
-                    <span class="plus">></span>
-                </div>
-            </div> -->
         </div>
         <div class="btn">
             <button class="close">Cerrar</button>

@@ -5,8 +5,19 @@ let iconCart = document.getElementById('lg-bag');
 let closeCart = document.querySelector('.close');
 let body = document.querySelector('body');
 let listProdctHTML = document.querySelector('.listProduct');
+let listProdctHTMLN = document.querySelector('.listProductN');
+let listProdctHTMLF = document.querySelector('.listProductF');
 let listCartHTML = document.querySelector('.listCart');
 let iconCartSpan = document.querySelector("#lg-bag span")
+/* let hiddenInv = document.getElementById('hidden') */
+let invState = document.querySelector('.listProduct');
+let invStateN = document.querySelector('.listProductN');
+let invStateF = document.querySelector('.listProductF');
+let shownInv = document.getElementById('shown');
+let featured = document.getElementById('featured');
+let bnew = document.getElementById('bnew');
+let toPay = document.querySelector("body div div.total span")
+
 
 let listProdcs = [];
 let carts = [];
@@ -40,20 +51,67 @@ if (close) {
 }
 
 const addDataToHTML = () => {
-    /* listProdctHTML.innerHTML = ''; */
     if(listProdcs.length > 0){
-        listProdcs.forEach(product => {
-            let newProduct = document.createElement('div');
-            newProduct.classList.add('item');
-            newProduct.dataset.id =product.id
-            newProduct.innerHTML = `
-                <img src="${product.image}" alt="Imagen del Producto">
-                <h4>${product.name}</h4>
-                <div class="precio">$${product.precio}</div>
-                <button class="addCart">Añadir al Carrito</button>
-                `;
-                listProdctHTML.appendChild(newProduct);
-        })
+        if(invState==shownInv && listProdctHTML!=null){
+            listProdcs.forEach(product => {
+                let newProduct = document.createElement('div');
+                newProduct.classList.add('item');
+                newProduct.dataset.id =product.id
+                newProduct.innerHTML = `
+                    <img src="${product.image}" alt="Imagen del Producto">
+                    <span>${product.brand}</span>
+                    <h4>${product.name}</h4>
+                    <div class="precio">$${product.precio}</div>
+                    <button class="addCart">Añadir al Carrito</button>
+                    `;
+                    listProdctHTML.appendChild(newProduct);
+            })
+        }
+        
+    }
+}
+
+
+const addFeaturedToHTML = () => {
+    if(listProdcs.length > 0){
+        if(invStateF==featured && listProdctHTMLF!=null){
+            listProdcs.slice(8, 16).forEach(product => {
+                let newProduct = document.createElement('div');
+                newProduct.classList.add('item');
+                newProduct.dataset.id =product.id
+                newProduct.innerHTML = `
+                    <img src="${product.image}" alt="Imagen del Producto">
+                    <span>${product.brand}</span>
+                    <h4>${product.name}</h4>
+                    <div class="precio">$${product.precio}</div>
+                    <button class="addCart">Añadir al Carrito</button>
+                    `;
+                    listProdctHTMLF.appendChild(newProduct);
+            })
+        }
+        
+    }
+}
+
+
+const addBnewToHTML = () => {
+    if(listProdcs.length > 0){
+        if(invStateN==bnew && listProdctHTMLN!=null){
+            listProdcs.slice(0, 8).forEach(product => {
+                let newProduct = document.createElement('div');
+                newProduct.classList.add('item');
+                newProduct.dataset.id =product.id
+                newProduct.innerHTML = `
+                    <img src="${product.image}" alt="Imagen del Producto">
+                    <span>${product.brand}</span>
+                    <h4>${product.name}</h4>
+                    <div class="precio">$${product.precio}</div>
+                    <button class="addCart">Añadir al Carrito</button>
+                    `;
+                    listProdctHTMLN.appendChild(newProduct);
+            })
+        }
+        
     }
 }
 
@@ -64,6 +122,27 @@ listProdctHTML.addEventListener('click', (event) =>{
         addToCart(product_id);
     }
 })
+
+if(listProdctHTMLF!=null){
+    listProdctHTMLF.addEventListener('click', (event) =>{
+        let positionClick = event.target;
+        if(positionClick.classList.contains('addCart')){
+            let product_id = positionClick.parentElement.dataset.id;
+            addToCart(product_id);
+        }
+    })
+}
+
+if(listProdctHTMLN!=null){
+    listProdctHTMLN.addEventListener('click', (event) =>{
+        let positionClick = event.target;
+        if(positionClick.classList.contains('addCart')){
+            let product_id = positionClick.parentElement.dataset.id;
+            addToCart(product_id);
+        }
+    })
+}
+
 
 const addToCart = (product_id) => {
     let positionThisProductInCart = carts.findIndex((value) => value.product_id == product_id);
@@ -110,9 +189,9 @@ const addCartToHTML = () => {
                     $${info.precio * cart.quantity}
                 </div>
                 <div class="quantity">
-                    <span class="minus"><</span>
+                    <span class="minus">-</span>
                     <span>${cart.quantity}</span>
-                    <span class="plus">></span>
+                    <span class="plus">+</span>
                 </div>
             `;
         listCartHTML.appendChild(newCart);
@@ -162,6 +241,8 @@ const initApp = () => {
     .then(data => {
         listProdcs = data;
         addDataToHTML();
+        addFeaturedToHTML();
+        addBnewToHTML();
 
         if(localStorage.getItem('cart')){
             carts = JSON.parse(localStorage.getItem('cart'));
