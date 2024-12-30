@@ -19,7 +19,7 @@ Uso
 
 
 To do
-- [Limpiar codigo]
+- [Limpiar y optimizar codigo]
 - [Agregar estrellas de puntuacion para cada producto]
 
 

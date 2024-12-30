@@ -1235,6 +1235,81 @@ padding-right: 22px;
     font-size: 13px;
 }
 
+/* PopUp */
+.popup .overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
+}
+
+.popup .description {
+    position:fixed;
+    display: grid;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: #fff;
+    width: 450px;
+    height: 220px;
+    z-index: 2;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.popup .description div{
+    display: flex;
+}
+
+.popup .description .img{
+    width: auto;
+}
+
+.popup .description .info{
+    display: grid;
+}
+
+.popup .description .alts{
+    height: 20%;
+}
+
+
+.popup .description h1{
+    font-size: medium;
+    max-height: 50px;
+    line-height: 100%;
+    padding-top: 30px;
+}
+
+.popup .close-btn{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    background: #222;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup.active .overlay {
+    display: block;
+}
+
+.popup.active .description {
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
 
 
 /* Star Media Query */
@@ -1425,6 +1500,9 @@ padding-right: 22px;
         width: 100%;
     }
 
+    .carrito{
+        z-index: 3;
+    }
 
 }
 
@@ -1587,6 +1665,19 @@ padding-right: 22px;
     }
     .listProductN .item{
         width: 100%;
+    }
+
+    .popup .description {
+        position:fixed;
+        display: flex;
+        flex-direction: column;
+        top: 50%;
+        left: 50%;
+        width: 250px;
+        height: 400px;
+    }
+    .popup img{
+        width: 60%;
     }
 }
 

@@ -9,7 +9,6 @@ let listProdctHTMLN = document.querySelector('.listProductN');
 let listProdctHTMLF = document.querySelector('.listProductF');
 let listCartHTML = document.querySelector('.listCart');
 let iconCartSpan = document.querySelector("#lg-bag span")
-/* let hiddenInv = document.getElementById('hidden') */
 let invState = document.querySelector('.listProduct');
 let invStateN = document.querySelector('.listProductN');
 let invStateF = document.querySelector('.listProductF');
@@ -17,6 +16,7 @@ let shownInv = document.getElementById('shown');
 let featured = document.getElementById('featured');
 let bnew = document.getElementById('bnew');
 let toPay = document.querySelector("body div div.total span")
+let popupInfo = document.querySelector(".description")
 
 
 let listProdcs = [];
@@ -50,6 +50,40 @@ if (close) {
     })
 }
 
+function clearPopup(){
+    popupInfo.innerHTML=``;
+}
+
+
+function togglePopup(){
+    clearPopup()
+    document.getElementById("popup-1").classList.toggle("active");
+    let positionClick = event.target;
+    if(positionClick.classList.contains('show')){
+        let product_id = positionClick.parentElement.dataset.id;
+        listProdcs.forEach(product => {
+            if(product_id==product.id){
+                let newPopup = document.createElement('div');
+                newPopup.classList.add('description');
+                newPopup.dataset.id =product_id
+                newPopup.innerHTML = `
+                    <div class="close-btn" onclick="togglePopup()"><i class="fa fa-times" aria-hidden="true"></i></div>
+                    <div>
+                    <img src="${product.image}" alt="Imagen del Producto">
+                    </div><div class="info">
+                    <h1>${product.name}</h1>
+                    <p>${product.fullName}</p>
+                    </div>
+                    `;
+                    popupInfo.appendChild(newPopup)
+
+            }
+        })
+    }
+}
+
+
+
 const addDataToHTML = () => {
     if(listProdcs.length > 0){
         if(invState==shownInv && listProdctHTML!=null){
@@ -63,6 +97,7 @@ const addDataToHTML = () => {
                     <h4>${product.name}</h4>
                     <div class="precio">$${product.precio}</div>
                     <button class="addCart">Añadir al Carrito</button>
+                    <button onclick="togglePopup()" class="show">Info</button>
                     `;
                     listProdctHTML.appendChild(newProduct);
             })
@@ -85,6 +120,7 @@ const addFeaturedToHTML = () => {
                     <h4>${product.name}</h4>
                     <div class="precio">$${product.precio}</div>
                     <button class="addCart">Añadir al Carrito</button>
+                    <button onclick="togglePopup()" class="show">Info</button>
                     `;
                     listProdctHTMLF.appendChild(newProduct);
             })
@@ -107,6 +143,7 @@ const addBnewToHTML = () => {
                     <h4>${product.name}</h4>
                     <div class="precio">$${product.precio}</div>
                     <button class="addCart">Añadir al Carrito</button>
+                    <button onclick="togglePopup()" class="show">Info</button>
                     `;
                     listProdctHTMLN.appendChild(newProduct);
             })
@@ -140,8 +177,30 @@ if(listProdctHTMLN!=null){
             let product_id = positionClick.parentElement.dataset.id;
             addToCart(product_id);
         }
+        
     })
 }
+
+const generatePopup =(product_id) => {
+    if(listProdcs.length > 0){
+        if(invStateN==bnew && listProdctHTMLN!=null){
+            listProdcs.forEach(product => {
+    let newPopup = document.createElement('div');
+                newPopup.classList.add('description');
+                newPopup.dataset.id =product_id
+                newPopup.innerHTML = `
+                    <img src="${product.image}" alt="Imagen del Producto">
+                    <span>${product.brand}</span>
+                    <h4>${product.name}</h4>
+                    <div class="precio">$${product.precio}</div>
+                    <button class="addCart">Añadir al Carrito</button>
+                    `;
+                })
+            }
+            
+        }
+    }
+
 
 
 const addToCart = (product_id) => {
@@ -243,6 +302,7 @@ const initApp = () => {
         addDataToHTML();
         addFeaturedToHTML();
         addBnewToHTML();
+        
 
         if(localStorage.getItem('cart')){
             carts = JSON.parse(localStorage.getItem('cart'));
